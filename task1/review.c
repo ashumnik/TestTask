@@ -23,7 +23,15 @@ int count_list_items(const list_t *head)
 	 */
 void insert_next_to_list(list_t *item, int data) 
 {
+	if (item == NULL)
+		// err msg
+		return;
+	
 	list_t *next = malloc(sizeof(list_t));
+	if (next == NULL)
+		// err msg
+		return;
+
 	next->next = item->next;
 	item->next = next;
 	next->data = data;
@@ -33,6 +41,10 @@ void insert_next_to_list(list_t *item, int data)
 	 */
 void remove_next_from_list(list_t *item) 
 {
+	if (item == NULL)
+		// err msg
+		return;
+
 	list_t *tmp = item->next;
 	if (item->next)
 	{
@@ -45,7 +57,11 @@ void remove_next_from_list(list_t *item)
 	 */
 char *item_data(const list_t *list)
 {
-	char *buf = malloc(12);
+	if (list == NULL)
+		// err msg
+		return;
+
+	static char buf[12];
 
 	sprintf(buf, "%d", list->data);
 	return buf;
