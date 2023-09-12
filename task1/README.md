@@ -1,6 +1,6 @@
 # Task1 Review
 
-## Changes: [commit](https://github.com/ashumnik/TestTask/commit/75dd9219ca9aac214dee7cbbb7b216ca2de4a8c4)
+## Changes: [commit](https://github.com/ashumnik/TestTask/commit/75dd9219ca9aac214dee7cbbb7b216ca2de4a8c4), [commit 2](https://github.com/ashumnik/TestTask/commit/4aa3a91017b296574dc0072e3df44d930037fb20) 
 
 ### count_list_items()
 Compared to iteration, a reusable recursive function call takes more time. This is due to the fact that when a recursive method is called, its parameters are copied to the stack. At the end of the recursive function call, the previous parameter values are pulled from the stack, which leads to unnecessary operations. The iterative algorithm for this task works faster.
